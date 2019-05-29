@@ -1,0 +1,28 @@
+# config/polls.yaml
+
+provider:
+  #gd - glassdoor
+  name: 'gd'
+  #Copy url from the browser after you perform the search on your desired position
+  searchurl: 'https://www.glassdoor.com/Job/jobs.htm?suggestCount=0&suggestChosen=false&clickSource=searchBtn&typedKeyword=%22data+scientist%22&sc.keyword=%22data+scientist%22&locT=&locId=&jobType='
+  #only for naming files. Searched jobtitle encoded in search url
+  searchstring: 'data scientist'
+
+
+general:
+  usecsv:   True
+
+  #absolute path to the root folder to store job files. Path from root : /'provider'/'date'/'filename'
+  #If 'default' the root path to the folder will be {parse.py dir} /root/
+  filepath: 'default'
+
+  #Absolute path to file where to store csv
+  #If 'default' the root path to the folder will be parse.py dir
+  csvpath:  'default'
+
+  #name of csv file
+  csvfilename: 'data.csv'
+
+  #separator for csv file
+  csvsep: ';'
+
